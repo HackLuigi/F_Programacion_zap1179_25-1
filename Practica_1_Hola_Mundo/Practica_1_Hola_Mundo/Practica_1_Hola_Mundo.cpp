@@ -13,7 +13,7 @@
 #include <codecvt>//Librerias para cambiar codigos de UTF
 #include <locale.h>//head file que solo funciona en windows
 
-int main()
+long int main()
 {
 	//Maneras de configurar para que soporte ñ y acentos
 	setlocale(LC_ALL, "en-US");
@@ -26,9 +26,8 @@ int main()
 	//Tipo Nombre = Valor asignado de declaracion o inicialización
 	int Edad = 0;
 	float Altura = 0;
-	float Cali = 0;
 	//Para guardar VERDADES O FALSEDADES
-	bool d1 = false;
+	bool Me_amas = false;
 	//Para guardar numeros REALMENTE EXTENSOS
 	double Exponencial = 0;
 	//Para guardar letras!!
@@ -52,5 +51,24 @@ int main()
 	std::cout << "Ingresar Sexo" << std::endl;
 	std::cin >> sexo;
 	std::cout << "Sexo confirmado como " << sexo << " correctamente" << std::endl;
-	std::cout << "Entonces, eres " << nombre << " edad de " << Edad << "años, " << sexo << Altura << " bienvenido y disfrute de su sistema FunctionOS";
+	std::cout << "Ingrese numeros de mas de 10 digitos de los que quiera" << std::endl;
+	std::cin >> Exponencial;
+	std::cout << "Entonces, eres " << nombre << " edad de " << Edad << " años, " << sexo << Altura << "Y eligio su numero de mas de 10 digitos como " << Exponencial << " bienvenido y disfrute de su sistema FunctionOS" << std::endl;
+	std::cout << "Ahora, pasemos a hacer equaciones con esta informacion" << std::endl;
+	std::cout << "Su edad en 10 años seria " << Edad + 10 << std::endl;
+	std::cout << "Su edad hace 10 años fue " << Edad - 10 << std::endl;
+	std::cout << "Su edad cuando pasen ese mismo tiempo sera " << Edad * 2 << std::endl;
+	std::cout << "Su edad si se divide sera " << Edad / 2 << std::endl;
+	std::cout << "Con los numeros que eligio, si las ponemos con su raiz seria " << sqrt(Exponencial) << std::endl;
+	std::cout << "Con los numeros que eligio, su potencia seria " << pow(Exponencial, (Edad)) << std::endl;
+	std::cout << "Usuario ¿Me amas?" << std::endl;
+	std::cin >> Me_amas;
+	if (Me_amas == true)
+	{
+		std::cout << "Muchas gracias... Usuario, guardare esta informacion bien";
+	}
+	else
+	{
+		std::cout << "XD";
+	}
 }
